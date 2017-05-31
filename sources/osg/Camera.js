@@ -95,7 +95,6 @@ Camera.prototype = MACROUTILS.objectLibraryClass( MACROUTILS.objectInherit(
 
         },
 
-
         getAttachments: function () {
             return this._attachments;
         },
@@ -169,7 +168,12 @@ Camera.prototype = MACROUTILS.objectLibraryClass( MACROUTILS.objectInherit(
             this.renderOrder = order;
             this.renderOrderNum = orderNum;
         },
-
+        getFrameBufferObject: function () {
+            return this.frameBufferObject;
+        },
+        setFrameBufferObject: function ( fbo ) {
+            this.frameBufferObject = fbo;
+        },
         detachAll: function () {
             this._attachments = {};
 

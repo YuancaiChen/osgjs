@@ -230,9 +230,6 @@ RenderStage.prototype = MACROUTILS.objectLibraryClass( MACROUTILS.objectInherit(
                 framebufferHeight = colorAttachment.texture.getHeight();
             }
 
-            // we should use a map in camera to avoid to regenerate the keys
-            // each time. But because we dont have a lot of camera I guess
-            // it does not change a lot
             // texture and renderbuffer must be same size.
             for ( var keyAttachment in attachments ) {
                 colorAttachment = attachments[ keyAttachment ];
